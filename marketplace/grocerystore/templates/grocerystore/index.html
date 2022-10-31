@@ -1,0 +1,9 @@
+{% if latest_results_list %}
+    <ul>
+    {% for result in latest_results_list %}
+        <li><a href="/grocerystore/{{ result.id }}/">{{ result.product_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
